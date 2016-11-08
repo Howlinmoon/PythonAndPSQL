@@ -15,6 +15,11 @@ class User:
                 watchedMovies.append(currentMovie.name)
         return watchedMovies
 
+    def set_watched(self, name):
+        for movie in self.movies:
+            if movie.name == name:
+                movie.watched = True
+
     def add_movie(self, name, genre):
         # create a new movie object
         newMovie = Movie(name, genre, False)
